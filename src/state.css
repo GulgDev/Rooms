@@ -1,0 +1,19 @@
+:root:has(#current-room1:checked)         #room1,
+:root:has(#current-room2:checked)         #room2,
+:root:has(#current-room3:checked)         #room3,
+:root:has(#current-room4:checked)         #room4,
+:root:has(#current-room5:checked)         #room5,
+:root:has(#current-room6:checked)         #room6,
+:root:has(#current-room7:checked)         #room7,
+:root:has(#current-room8:checked)         #room8,
+:root:has(#current-room-exit:checked)     #room-exit,
+:root:has(#current-room-dead-end:checked) #room-dead-end {
+    display: block;
+}
+
+:root:has(#current-room5:checked)         #caption,
+:root:has(#current-room8:checked)         #caption,
+:root:has(#current-room-exit:checked)     #caption,
+:root:has(#current-room-dead-end:checked) #caption {
+  display: none;
+}

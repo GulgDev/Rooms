@@ -1,0 +1,57 @@
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+#scene {
+    width: 100vw;
+    height: 100vh;
+    perspective: var(--perspective);
+}
+
+.box {
+    position: relative;
+    transform-style: preserve-3d;
+    width: var(--width);
+    height: var(--height);
+    top: calc(50% - var(--height) / 2);
+    left: calc(50% - var(--width) / 2);
+    transform: translateZ(calc(var(--perspective) - var(--length) / 2 + var(--z)));
+}
+
+.box .transform {
+    transform-style: preserve-3d;
+}
+
+.box .face {
+    position: absolute;
+}
+
+.box .face.front,
+.box .face.back {
+    width: var(--width);
+    height: var(--height);
+}
+
+.box .face.left,
+.box .face.right {
+    left: calc((var(--width) - var(--length)) / 2);
+    width: var(--length);
+    height: var(--height);
+}
+
+.box .face.top,
+.box .face.bottom {
+    top: calc((var(--height) - var(--length)) / 2);
+    width: var(--width);
+    height: var(--length);
+}
+
+.box .face.front  { transform: rotateY(  0deg) translateZ(calc(var(--length) / 2)); }
+.box .face.back   { transform: rotateY(180deg) translateZ(calc(var(--length) / 2)); }
+
+.box .face.left   { transform: rotateY(-90deg) translateZ(calc(var(--width) / 2)); }
+.box .face.right  { transform: rotateY( 90deg) translateZ(calc(var(--width) / 2)); }
+
+.box .face.top    { transform: rotateX( 90deg) translateZ(calc(var(--height) / 2)); }
+.box .face.bottom { transform: rotateX(-90deg) translateZ(calc(var(--height) / 2)); }

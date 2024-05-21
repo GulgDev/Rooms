@@ -1,0 +1,258 @@
+<!-- This is entirely written in CSS. Am I cRaZy??? -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rooms</title>
+        <link rel="stylesheet" href="src/index.css">
+    </head>
+    <body>
+        <div id="firefox-stub" class="overlay">
+            This game can't run in Firefox because of <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1233978" target="_blank">a bug</a>. <br>
+            Use a different browser to play it!
+        </div>
+        <span id="caption">You are stuck in this room. Choose one door to escape</span>
+        <div id="current-room">
+            <input type="radio" id="current-room1" name="current-room">
+            <input type="radio" id="current-room2" name="current-room">
+            <input type="radio" id="current-room3" name="current-room">
+            <input type="radio" id="current-room4" name="current-room">
+            <input type="radio" id="current-room5" name="current-room">
+            <input type="radio" id="current-room6" name="current-room">
+            <input type="radio" id="current-room7" name="current-room">
+            <input type="radio" id="current-room8" name="current-room">
+            <input type="radio" id="current-room-exit" name="current-room">
+            <input type="radio" id="current-room-dead-end" name="current-room">
+            <input type="radio" id="current-room-win" name="current-room">
+        </div>
+        <div id="win-screen" class="overlay">
+            You escaped! Congratulations :D <br>
+            Check out the source code, this game is written in CSS
+        </div>
+        <div id="menu" class="overlay">
+            <span id="title">Rooms</span>
+            <div id="play" class="randomize">
+                Play
+                <label for="current-room1"></label>
+                <label for="current-room2"></label>
+            </div>
+        </div>
+        <div id="transition" class="overlay"></div>
+        <div id="scene">
+            <div id="room1" class="room box">
+                <div class="transform">
+                    <div class="face left">
+                        <div class="door randomize">
+                            <label for="current-room3"></label>
+                            <label for="current-room4"></label>
+                        </div>
+                    </div>
+                    <div class="face right">
+                        <div class="door randomize">
+                            <label for="current-room3"></label>
+                            <label for="current-room4"></label>
+                        </div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        Choose wisely
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <div class="door randomize">
+                            <label for="current-room3"></label>
+                            <label for="current-room4"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="room2" class="room box">
+                <div class="transform">
+                    <div class="face left">
+                        <div class="door randomize">
+                            <label for="current-room3"></label>
+                            <label for="current-room4"></label>
+                        </div>
+                    </div>
+                    <div class="face right">
+                        <div class="door randomize">
+                            <label for="current-room3"></label>
+                            <label for="current-room4"></label>
+                        </div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        Choose wisely
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                </div>
+            </div>
+            <div id="room3" class="room box">
+                <div class="transform">
+                    <div class="face left">
+                        <div class="door randomize">
+                            <label for="current-room4"></label>
+                            <label for="current-room5"></label>
+                            <label for="current-room6"></label>
+                            <label for="current-room-dead-end"></label>
+                            <label for="current-room-exit"></label>
+                        </div>
+                    </div>
+                    <div class="face right">
+                        <div class="door randomize">
+                            <label for="current-room4"></label>
+                            <label for="current-room5"></label>
+                            <label for="current-room6"></label>
+                            <label for="current-room-dead-end"></label>
+                            <label for="current-room-exit"></label>
+                        </div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        Another choice
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <div class="door randomize">
+                            <label for="current-room4"></label>
+                            <label for="current-room5"></label>
+                            <label for="current-room6"></label>
+                            <label for="current-room-dead-end"></label>
+                            <label for="current-room-exit"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="room4" class="room box">
+                <div class="transform">
+                    <div class="face left">
+                        <div class="door randomize">
+                            <label for="current-room3"></label>
+                            <label for="current-room5"></label>
+                            <label for="current-room6"></label>
+                            <label for="current-room-dead-end"></label>
+                            <label for="current-room-exit"></label>
+                        </div>
+                    </div>
+                    <div class="face right">
+                        <div class="door randomize">
+                            <label for="current-room3"></label>
+                            <label for="current-room5"></label>
+                            <label for="current-room6"></label>
+                            <label for="current-room-dead-end"></label>
+                            <label for="current-room-exit"></label>
+                        </div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        Another choice
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                </div>
+            </div>
+            <div id="room5" class="room box">
+                <div class="transform">
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        All or nothing
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <div class="door randomize">
+                            <label for="current-room-dead-end"></label>
+                            <label for="current-room-exit"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="room6" class="room box">
+                <div class="transform">
+                    <div class="face left">
+                        <div class="door">
+                            <label for="current-room7"></label>
+                        </div>
+                    </div>
+                    <div class="face right">
+                        <div class="door">
+                            <label for="current-room8"></label>
+                        </div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        Left is bad
+                        Right is good
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back"></div>
+                </div>
+            </div>
+            <div id="room7" class="room box">
+                <div class="transform">
+                    <div class="face left"></div>
+                    <div class="face right">
+                        <div class="door">
+                            <label for="current-room-exit"></label>
+                        </div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        Go back while you still can.
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <div class="door">
+                            Back
+                            <label for="current-room6"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="room8" class="room box">
+                <div class="transform">
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <img id="trollface" src="res/trollface.png">
+                    </div>
+                </div>
+            </div>
+            <div id="room-exit" class="room box">
+                <div class="transform">
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        Good job!
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        <div class="door">
+                            <label for="current-room-win"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="room-dead-end" class="room box">
+                <div class="transform">
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom">
+                        Try again
+                    </div>
+                    <div class="face front"></div>
+                    <div class="face back">
+                        You've reached a DEAD END.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

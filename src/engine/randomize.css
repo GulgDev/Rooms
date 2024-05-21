@@ -1,0 +1,24 @@
+@keyframes randomize2 { from { z-index: 6; }  to { z-index: 1; } }
+@keyframes randomize3 { from { z-index: 9; }  to { z-index: 1; } }
+@keyframes randomize4 { from { z-index: 12; } to { z-index: 1; } }
+@keyframes randomize5 { from { z-index: 15; } to { z-index: 1; } }
+@keyframes randomize6 { from { z-index: 18; } to { z-index: 1; } }
+@keyframes randomize7 { from { z-index: 21; } to { z-index: 1; } }
+@keyframes randomize8 { from { z-index: 24; } to { z-index: 1; } }
+
+.randomize:has(:first-child:nth-last-child(2)) > * { animation: randomize2  300ms infinite linear; }
+.randomize:has(:first-child:nth-last-child(3)) > * { animation: randomize3  450ms infinite linear; }
+.randomize:has(:first-child:nth-last-child(4)) > * { animation: randomize4  600ms infinite linear; }
+.randomize:has(:first-child:nth-last-child(5)) > * { animation: randomize5  750ms infinite linear; }
+.randomize:has(:first-child:nth-last-child(6)) > * { animation: randomize6  900ms infinite linear; }
+.randomize:has(:first-child:nth-last-child(7)) > * { animation: randomize7 1050ms infinite linear; }
+.randomize:has(:first-child:nth-last-child(8)) > * { animation: randomize8 1200ms infinite linear; }
+
+.randomize > :nth-child(1)  { animation-delay:    -0ms !important; }
+.randomize > :nth-child(2)  { animation-delay:  -150ms !important; }
+.randomize > :nth-child(3)  { animation-delay:  -300ms !important; }
+.randomize > :nth-child(4)  { animation-delay:  -450ms !important; }
+.randomize > :nth-child(5)  { animation-delay:  -600ms !important; }
+.randomize > :nth-child(6)  { animation-delay:  -750ms !important; }
+.randomize > :nth-child(7)  { animation-delay:  -900ms !important; }
+.randomize > :nth-child(8)  { animation-delay: -1050ms !important; }

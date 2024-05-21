@@ -1,0 +1,54 @@
+.room {
+    --x: 0;
+    --y: 0;
+    --z: 0;
+    --width: 100vw;
+    --height: 100vh;
+    --length: 100vw;
+    display: none;
+}
+
+.room .transform {
+    transition: transform linear 100ms;
+}
+
+.room .face.bottom {
+    background-color: gray;
+}
+
+.room .face.top {
+    background-color: beige;
+}
+
+.room .face.left,
+.room .face.right,
+.room .face.front,
+.room .face.back {
+    background-color: wheat;
+}
+
+.room .face.right  { transform: rotateY(-90deg) translateZ(calc(var(--width) / -2)); }
+.room .face.bottom { transform: rotateX( 90deg) translateZ(calc(var(--height) / -2)); }
+.room .face.back   { transform: rotateY(  0deg) translateZ(calc(var(--length) / -2)); }
+
+.room .face.bottom,
+.room .face.back {
+    font-size: 15vw;
+    color: white;
+    text-align: center;
+    user-select: none;
+}
+
+.room .face.bottom {
+    box-sizing: border-box;
+    padding-top: 15vw;
+}
+
+.room .face.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:root:has(.room .face.left:hover)  .room .transform { transform: rotateY(-45deg); }
+:root:has(.room .face.right:hover) .room .transform { transform: rotateY( 45deg); }
